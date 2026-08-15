@@ -2,7 +2,7 @@
  * 1. Esercizio: Stampa i numeri da 1 a 10 usando un ciclo for.
  * 2. Stampa i numeri da 1 a 10 usando un ciclo while.
  *3.Chiedi un numero N all'utente. Stampa i numeri da 0 a N usando un ciclo for.
- *
+ *4.Chiedi un numero N all'utente. Stampa i numeri da 0 a N usando un ciclo while.
  *
  *
  *
@@ -38,7 +38,44 @@
 //     console.error("Input non valido, reinserisci")
 // }
 
+//------------------------------------------------
+
+// function printNumbers() {
+//     const input = prompt(" Dammi un numero N: ");
+    
+//     if (input === null || input.trim() === "") {
+//         console.warn("Operazione annullata o input vuoto.");
+//         return;        
+//     }
+
+//     const n = Number (input);
+
+//     if (!Number.isInteger(n) || n < 0) {
+//         console.error("Errore: Devi inserire un numero intero positivo o zero");
+//         return;
+//         }
+        
+//         let current = 0;
+//         while (current <= n) {
+//             console.log(current);
+//             current++;
+//         }
+//     }
+
+//     printNumbers();
+
 
 //------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 

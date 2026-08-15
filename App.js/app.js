@@ -26,17 +26,17 @@
 //------------------------------------------------
 
 
-const input = prompt("Dammi un numero N");
-const n = Number(input);
+// const input = prompt("Dammi un numero N");
+// const n = Number(input);
 
-if (input !== null && !Number.isNaN(n) && n >= 0) {
+// if (input !== null && !Number.isNaN(n) && n >= 0) {
 
-    for (let i = 0; i <= n; i++) {
-        console.log(i);
-    }
-} else {
-    console.error("Input non valido, reinserisci")
-}
+//     for (let i = 0; i <= n; i++) {
+//         console.log(i);
+//     }
+// } else {
+//     console.error("Input non valido, reinserisci")
+// }
 
 
 //------------------------------------------------

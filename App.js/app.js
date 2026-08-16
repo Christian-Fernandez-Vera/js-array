@@ -3,7 +3,7 @@
  * 2. Stampa i numeri da 1 a 10 usando un ciclo while.
  *3.Chiedi un numero N all'utente. Stampa i numeri da 0 a N usando un ciclo for.
  *4.Chiedi un numero N all'utente. Stampa i numeri da 0 a N usando un ciclo while.
- *
+ * 5.Stampa la tabellina del 5.
  *
  *
  *
@@ -67,10 +67,28 @@
 
 //------------------------------------------------
 
+// /**
+//  * @param {Number} numBase
+//  * @param {Number} [limit = 10]
+//  * @return {void} 
+//  */
 
+// function printMultiples(numBase, limit = 10) {
 
+//     if (typeof numBase !== 'number' || Number.isNaN(numBase)) {
+//         throw new TypeError('Il primo parametro deve essere un numero.');
+//     }
 
+//     for (let i = 0; i <= limit; i++) {
+//         const result = i * numBase;
+//         console.log(`${numBase} x ${i} = ${result}`);        
+//     }
+// }
+    
+//     const MULTI_BASE = 5;
+//     printMultiples(MULTI_BASE);
 
+//------------------------------------------------
 
 
 

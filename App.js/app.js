@@ -5,7 +5,7 @@
  *4.Chiedi un numero N all'utente. Stampa i numeri da 0 a N usando un ciclo while.
  * 5.Stampa la tabellina del 5.
  * 6.Chiedi all'utente una parola e un numero N. Stampa quella parola N volte.
- *
+ *7.Chiedi un numero N all'utente. Calcola la somma di tutti i numeri da 1 a N e stampa il risultato.
  *
  *
  */
@@ -91,41 +91,41 @@
 //------------------------------------------------
 
 
-/**
- * @param {string} word
- * @param {number} times
- * @throws {TypeError}
- * @throws {RangeError} 
- */
+// /**
+//  * @param {string} word
+//  * @param {number} times
+//  * @throws {TypeError}
+//  * @throws {RangeError} 
+//  */
 
-function repeatWord(word, times) {
+// function repeatWord(word, times) {
 
-    if (typeof word !== 'string' || word.trim() === "") {
-        throw new TypeError("La parola deve essere una stringa non vuota")
-    }
+//     if (typeof word !== 'string' || word.trim() === "") {
+//         throw new TypeError("La parola deve essere una stringa non vuota")
+//     }
 
-    if (typeof times !== 'number' || Number.isNaN(times) || !Number.isInteger || times < 0) {
-        throw new RangeError("Il secondo parametro deve essere un numero intero non negativo.")
+//     if (typeof times !== 'number' || Number.isNaN(times) || !Number.isInteger || times < 0) {
+//         throw new RangeError("Il secondo parametro deve essere un numero intero non negativo.")
 
-    }
+//     }
 
-    for (let i = 0; i < times; i++) {
-        console.log(`[${i + 1}/${times}] ${word}`);
+//     for (let i = 0; i < times; i++) {
+//         console.log(`[${i + 1}/${times}] ${word}`);
         
-    }
+//     }
 
-}
+// }
 
-const userInputWord = prompt ('Inserisci una parola:')??'';
-const useraInputTimes = Number(prompt('Inserisci un numero N:'));
+// const userInputWord = prompt ('Inserisci una parola:')??'';
+// const userInputTimes = Number(prompt('Inserisci un numero N:'));
 
-try {
-    repeatWord(userInputWord, useraInputTimes);
-} catch (error) {
-    console.error(`Errore di validazione: ${error.message}`);
-}
+// try {
+//     repeatWord(userInputWord, userInputTimes);
+// } catch (error) {
+//     console.error(`Errore di validazione: ${error.message}`);
+// }
 
 
-
+//------------------------------------------------
 
 

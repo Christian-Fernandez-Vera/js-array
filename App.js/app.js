@@ -6,8 +6,9 @@
  * 5.Stampa la tabellina del 5.
  * 6.Chiedi all'utente una parola e un numero N. Stampa quella parola N volte.
  *7.Chiedi un numero N all'utente. Calcola la somma di tutti i numeri da 1 a N e stampa il risultato.
+ *8. Chiedi all'utente di inserire il prezzo di un prodotto. Continua a chiedere prezzi e sommarli al totale finchÃ© l'utente non inserisce "0" per terminare. Stampa il totale della spesa.
  *
- *
+ * 
  */
 
 // for (let i = 1; i <= 10; i++) {
@@ -127,5 +128,50 @@
 
 
 //------------------------------------------------
+
+/**
+ * Chiedi all'utente di inserire il prezzo di un prodotto. Continua a chiedere prezzi e sommarli al totale finchÃ© l'utente non inserisce "0" per terminare. Stampa il totale della spesa.
+ *@returns {void}
+ */
+
+
+function runShoppingCart() {
+    let totalExpense = 0;
+    let isShopping = true;
+
+    while (isShopping) {
+        const rawInput = prompt("Inserisci il costo del prodotto (inserisci '0' per terminare): ");
+        
+        if ( rawInput === null) {
+            console.warn("Operazione annullata dall'untente");
+            return;
+        }
+
+        const sanitizedInput = rawInput.trim().replace(',', '.')
+        const price = Number(sanitizedInput);
+
+        if (sanitizedInput === '' || Number.isNaN(price) || price < 0) {
+            alert ("Errore: Inserisci un numero valido e positivo.");
+            continue;
+        }
+        if (price === 0) {
+            isShopping = false;
+        } else {
+            totalExpense += price;
+        }
+    }
+    
+    const formattedTotal = totalExpense.toFixed(2);
+    console.log(`Il totale della spesa è: ${formattedTotal} €`);
+    
+    }
+
+    runShoppingCart();
+
+
+
+
+
+
 
 

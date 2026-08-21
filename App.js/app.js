@@ -7,8 +7,8 @@
  * 6.Chiedi all'utente una parola e un numero N. Stampa quella parola N volte.
  *7.Chiedi un numero N all'utente. Calcola la somma di tutti i numeri da 1 a N e stampa il risultato.
  *8. Chiedi all'utente di inserire il prezzo di un prodotto. Continua a chiedere prezzi e sommarli al totale finchÃ© l'utente non inserisce "0" per terminare. Stampa il totale della spesa.
- *
- * 
+ *9. L'utente ha 3 tentativi per indovinare la password. Stampa "Benvenuto" se riesce nei tentativi consentiti, altrimenti "Bloccato"
+ * 10. Il computer pensa a un numero tra 1 e 100. L'utente indovina. Dopo ogni tentativo sbagliato, il computer dice "Troppo alto" o "Troppo basso" per aiutare l'utente.
  */
 
 // for (let i = 1; i <= 10; i++) {
@@ -129,47 +129,80 @@
 
 //------------------------------------------------
 
-/**
- * Chiedi all'utente di inserire il prezzo di un prodotto. Continua a chiedere prezzi e sommarli al totale finchÃ© l'utente non inserisce "0" per terminare. Stampa il totale della spesa.
- *@returns {void}
- */
+// /**
+//  * Chiedi all'utente di inserire il prezzo di un prodotto. Continua a chiedere prezzi e sommarli al totale finchÃ© l'utente non inserisce "0" per terminare. Stampa il totale della spesa.
+//  *@returns {void}
+//  */
 
 
-function runShoppingCart() {
-    let totalExpense = 0;
-    let isShopping = true;
+// function runShoppingCart() {
+//     let totalExpense = 0;
+//     let isShopping = true;
 
-    while (isShopping) {
-        const rawInput = prompt("Inserisci il costo del prodotto (inserisci '0' per terminare): ");
+//     while (isShopping) {
+//         const rawInput = prompt("Inserisci il costo del prodotto (inserisci '0' per terminare): ");
         
-        if ( rawInput === null) {
-            console.warn("Operazione annullata dall'untente");
-            return;
-        }
+//         if ( rawInput === null) {
+//             console.warn("Operazione annullata dall'untente");
+//             return;
+//         }
 
-        const sanitizedInput = rawInput.trim().replace(',', '.')
-        const price = Number(sanitizedInput);
+//         const sanitizedInput = rawInput.trim().replace(',', '.')
+//         const price = Number(sanitizedInput);
 
-        if (sanitizedInput === '' || Number.isNaN(price) || price < 0) {
-            alert ("Errore: Inserisci un numero valido e positivo.");
-            continue;
-        }
-        if (price === 0) {
-            isShopping = false;
-        } else {
-            totalExpense += price;
-        }
-    }
+//         if (sanitizedInput === '' || Number.isNaN(price) || price < 0) {
+//             alert ("Errore: Inserisci un numero valido e positivo.");
+//             continue;
+//         }
+//         if (price === 0) {
+//             isShopping = false;
+//         } else {
+//             totalExpense += price;
+//         }
+//     }
     
-    const formattedTotal = totalExpense.toFixed(2);
-    console.log(`Il totale della spesa è: ${formattedTotal} €`);
+//     const formattedTotal = totalExpense.toFixed(2);
+//     console.log(`Il totale della spesa è: ${formattedTotal} €`);
     
-    }
+//     }
 
-    runShoppingCart();
+//     runShoppingCart();
 
 
+//------------------------------------------------
 
+// /**
+//  * L'utente ha 3 tentativi per indovinare la password. Stampa "Benvenuto" se riesce nei tentativi consentiti, altrimenti "Bloccato"
+//  * @returns {void}
+//  */
+
+// function verifyPassword() {
+//     const pass_Correct = "nascosto123";
+//     const massTentativi = 3;
+//     let accesoConceduto = false;
+
+//     for (let tentativo = 1; tentativo <= massTentativi; tentativo++) {
+//         const inputUsuario = prompt(`Tentativo ${tentativo} di ${massTentativi}. Inserisci la password:`);
+    
+//     if ( inputUsuario === null) {
+//         break;
+//     }
+
+//     if (inputUsuario.trim() === pass_Correct) {
+//         accesoConceduto = true;
+//         break;
+//         }
+//     }
+
+//     if (accesoConceduto) {
+//         alert ("Benvenuto");
+//     } else {
+//         alert ("Bloccato");
+//     }
+
+// }
+    
+// verifyPassword();
 
 
 

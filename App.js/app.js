@@ -43,7 +43,7 @@
 
 // function printNumbers() {
 //     const input = prompt(" Dammi un numero N: ");
-    
+
 //     if (input === null || input.trim() === "") {
 //         console.warn("Operazione annullata o input vuoto.");
 //         return;        
@@ -55,7 +55,7 @@
 //         console.error("Errore: Devi inserire un numero intero positivo o zero");
 //         return;
 //         }
-        
+
 //         let current = 0;
 //         while (current <= n) {
 //             console.log(current);
@@ -85,7 +85,7 @@
 //         console.log(`${numBase} x ${i} = ${result}`);        
 //     }
 // }
-    
+
 //     const MULTI_BASE = 5;
 //     printMultiples(MULTI_BASE);
 
@@ -112,7 +112,7 @@
 
 //     for (let i = 0; i < times; i++) {
 //         console.log(`[${i + 1}/${times}] ${word}`);
-        
+
 //     }
 
 // }
@@ -141,7 +141,7 @@
 
 //     while (isShopping) {
 //         const rawInput = prompt("Inserisci il costo del prodotto (inserisci '0' per terminare): ");
-        
+
 //         if ( rawInput === null) {
 //             console.warn("Operazione annullata dall'untente");
 //             return;
@@ -160,10 +160,10 @@
 //             totalExpense += price;
 //         }
 //     }
-    
+
 //     const formattedTotal = totalExpense.toFixed(2);
 //     console.log(`Il totale della spesa è: ${formattedTotal} €`);
-    
+
 //     }
 
 //     runShoppingCart();
@@ -183,7 +183,7 @@
 
 //     for (let tentativo = 1; tentativo <= massTentativi; tentativo++) {
 //         const inputUsuario = prompt(`Tentativo ${tentativo} di ${massTentativi}. Inserisci la password:`);
-    
+
 //     if ( inputUsuario === null) {
 //         break;
 //     }
@@ -201,10 +201,53 @@
 //     }
 
 // }
-    
+
 // verifyPassword();
 
+//------------------------------------------------
+
+// /**
+//  * Gioco di indovinelli: Indovina il numero tra 1 e 100.
+//  * @returns {void}
+//  */
+
+// function guessTheNumber() {
+//     const MIN = 1;
+//     const MAX = 100;
+//     const targetNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+
+//     let attempts = 0;
+//     let hasGuessed = false;
+
+//     while (!hasGuessed) {
+//         const rawInput = prompt(`Indovina un numero compreso tra ${MIN} e ${MAX}`);
+
+//         if (rawInput === null) {
+//             console.warn("Partita interrota dall'untente");
+//             return;
+//         }
 
 
+//         const trimmedInput = rawInput.trim();
+//         const userGuess = Number(trimmedInput);
 
+//         if (trimmedInput === "" || Number.isNaN(userGuess) || Number.isInteger(userGuess)) {
+//             alert("Devi inserire un numero intero valido.");
+//             continue;
+//         }
 
+//         attempts++;
+
+//         if (userGuess === targetNumber) {
+//             alert(`Bravo! Hai indovinato il numero ${targetNumber} in ${attempts} tentativi.`);
+//             hasGuessed = true;
+//         } else if (userGuess > targetNumber) {
+//             alert("Troppo alto! Riprova.");        
+//         } else {
+//             alert("Troppo basso! Riprova");
+//         }
+        
+//     }
+// }
+
+// guessTheNumber();

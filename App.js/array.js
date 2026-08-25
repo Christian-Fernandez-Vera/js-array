@@ -2,7 +2,7 @@
  * 1.Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
  * 2.Dato l'array di numeri [10, 21, 6, 73, 9, 14, 44], crea un array con soli numeri pari
- * 
+ * 3.Dato un array di temperature settimanali [19, 21, 18, 23, 25, 22, 20], trova il valore massimo e trova il valore minino
  * 
  * 
  * 
@@ -56,29 +56,68 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 //------------------------------------------------------------
 
 
+// /**
+//  * @param {number[]} numbers
+//  * @returns {number[]}
+//  */
+
+// function filterEvenNumbers(numbers) {
+
+//     if(!Array.isArray(numbers)) return [];
+    
+//     const evenNumbers = [];
+
+//     for( let i = 0; i < numbers.length; i++) {
+//         const currentNumber = numbers[i];
+
+//         if (typeof currentNumber === 'number' && Number.isInteger(currentNumber) && currentNumber % 2 === 0) {
+//             evenNumbers.push(currentNumber);
+//         }
+//     }
+    
+//     return evenNumbers;
+    
+// }
+
+// const dataset = [10, 21, 6, 73, 9, 14, 44];
+// const resltIterate = filterEvenNumbers(dataset);
+// console.log(resltIterate);
+
+
+//------------------------------------------------------------
+
+
 /**
  * @param {number[]} numbers
- * @returns {number[]}
+ * @returns {{max: number, min: number}}
+ * 
  */
 
-function filterEvenNumbers(numbers) {
-
-    if(!Array.isArray(numbers)) return [];
+function findMaxAndMin(numbers) {
     
-    const evenNumbers = [];
-
-    for( let i = 0; i < numbers.length; i++) {
-        const currentNumber = numbers[i];
-
-        if (typeof currentNumber === 'number' && Number.isInteger(currentNumber) && currentNumber % 2 === 0) {
-            evenNumbers.push(currentNumber);
+        if (!Array.isArray(numbers) || numbers.length === 0){
+            return null;
         }
+
+        let minTemp = numbers[0]; 
+        let maxTemp = numbers[0];
+        
+        for ( let i = 0; i < numbers.length; i++) {
+            const inputTemp = numbers[i];
+
+            if( typeof inputTemp !== 'number' || Number.isNaN(inputTemp)) {
+                continue;
+                }
+            if (inputTemp < minTemp) minTemp = inputTemp;
+            if (inputTemp > maxTemp) maxTemp = inputTemp;
+            }
+
+        return {minTemp, maxTemp}
     }
     
-    return evenNumbers;
+    const tempSettimana = [19, 21, 18, 23, 25, 22, 20];
+    console.log(findMaxAndMin(tempSettimana));
     
-}
 
-const dataset = [10, 21, 6, 73, 9, 14, 44];
-const resltIterate = filterEvenNumbers(dataset);
-console.log(resltIterate);
+
+

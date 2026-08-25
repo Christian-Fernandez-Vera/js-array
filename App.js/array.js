@@ -102,7 +102,7 @@ function findMaxAndMin(numbers) {
         let minTemp = numbers[0]; 
         let maxTemp = numbers[0];
         
-        for ( let i = 0; i < numbers.length; i++) {
+        for ( let i = 1; i < numbers.length; i++) {
             const inputTemp = numbers[i];
 
             if( typeof inputTemp !== 'number' || Number.isNaN(inputTemp)) {

@@ -5,7 +5,7 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
  * 3.Dato un array di temperature settimanali [19, 21, 18, 23, 25, 22, 20], trova il valore massimo e trova il valore minino
  * 4.Dato l'array di voti [6, 8, 4, 9, 5, 7, 10], calcolare la media dei voti.
  * 5.Dato l'array ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'], crea un nuovo array con solo i nomi che hanno più di 4 lettere
- * 
+ * 6.Chiedi all'utente 5 numeri e salvali in un array. Alla fine calcola e stampa la somma di tutti i numeri inseriti.
  * 
  * 
  */
@@ -151,33 +151,71 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 //------------------------------------------------------------
 
 
-/**
- * @param {string[]} names
- * @returns {string[]} 
- * 
- */
+// /**
+//  * @param {string[]} names
+//  * @returns {string[]} 
+//  * 
+//  */
 
-function filterLongNames(names) {
+// function filterLongNames(names) {
 
-    if (!Array.isArray(names) || names.length === 0) {
-        return [];
-    }
+//     if (!Array.isArray(names) || names.length === 0) {
+//         return [];
+//     }
 
-    const result = [];
+//     const result = [];
 
-    for (const name of names) {
-        if (typeof name === 'string' && name.trim().length > 4) {
-            result.push(name);
-        }
-    }
+//     for (const name of names) {
+//         if (typeof name === 'string' && name.trim().length > 4) {
+//             result.push(name);
+//         }
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-const rawNames = ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'];
-console.log(filterLongNames(rawNames));
+// const rawNames = ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'];
+// console.log(filterLongNames(rawNames));
 
 
 //------------------------------------------------------------
 
+
+/**
+ * 
+ * @param {number} totalCount
+ * @returns {number}
+ */
+
+function addNumberUser(totalCount = 5) {
+    const number = [];
+
+    for (let i = 0; i < totalCount; i++) {
+        const input = prompt(`[${i + 1}/${totalCount}] Inserisci un numero:`)
+
+        if (input === null || input.trim() === "") {
+            throw new Error("Operazione annullata o input vuoto.");
+        }
+
+        const parsedNumber = Number(input);
+
+        if (Number.isNaN(parsedNumber)) {
+            throw new TypeError(`"${input}" non è un numero valido`);
+        }
+
+        number.push(parsedNumber);
+    }
+
+    let totalSum = 0;
+    for (let i = 0; i < number.length; i++) {
+        totalSum += number[i];
+    }
+
+    console.log("Numeri inseriti:", number);
+    console.log("Somma totale", totalSum);
+    
+    return totalSum;
+}
+
+addNumberUser(5);
 

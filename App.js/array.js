@@ -4,7 +4,7 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
  * 2.Dato l'array di numeri [10, 21, 6, 73, 9, 14, 44], crea un array con soli numeri pari
  * 3.Dato un array di temperature settimanali [19, 21, 18, 23, 25, 22, 20], trova il valore massimo e trova il valore minino
  * 4.Dato l'array di voti [6, 8, 4, 9, 5, 7, 10], calcolare la media dei voti.
- * 
+ * 5.Dato l'array ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'], crea un nuovo array con solo i nomi che hanno più di 4 lettere
  * 
  * 
  * 
@@ -123,26 +123,61 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 //------------------------------------------------------------
 
 
+// /**
+//  * 
+//  * @param {number[]} grades
+//  * @returns {number | null} 
+//  * 
+//  */
+
+
+// function mediaVoti(grades) {
+
+//     if (!Array.isArray(grades) || grades.length === 0) {
+//         return null;
+//     }
+//     let sommaTotale = 0;
+//     for (const voto of grades) {
+//         sommaTotale += voto;
+//     }
+//     return sommaTotale / grades.length;
+
+// }
+
+// const votiClasse = [6, 8, 4, 9, 5, 7, 10];
+// console.log(mediaVoti(votiClasse));
+
+
+//------------------------------------------------------------
+
+
 /**
- * 
- * @param {number[]} grades
- * @returns {number | null} 
+ * @param {string[]} names
+ * @returns {string[]} 
  * 
  */
 
+function filterLongNames(names) {
 
-function mediaVoti(grades) {
-
-    if (!Array.isArray(grades) || grades.length === 0) {
-        return null;
+    if (!Array.isArray(names) || names.length === 0) {
+        return [];
     }
-    let sommaTotale = 0;
-    for (const voto of grades) {
-        sommaTotale += voto;
-    }
-    return sommaTotale / grades.length;
 
+    const result = [];
+
+    for (const name of names) {
+        if (typeof name === 'string' && name.trim().length > 4) {
+            result.push(name);
+        }
+    }
+
+    return result;
 }
 
-const votiClasse = [6, 8, 4, 9, 5, 7, 10];
-console.log(mediaVoti(votiClasse));
+const rawNames = ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'];
+console.log(filterLongNames(rawNames));
+
+
+//------------------------------------------------------------
+
+

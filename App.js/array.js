@@ -6,7 +6,7 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
  * 4.Dato l'array di voti [6, 8, 4, 9, 5, 7, 10], calcolare la media dei voti.
  * 5.Dato l'array ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'], crea un nuovo array con solo i nomi che hanno più di 4 lettere
  * 6.Chiedi all'utente 5 numeri e salvali in un array. Alla fine calcola e stampa la somma di tutti i numeri inseriti.
- * 
+ * Genera 10 numeri random e salvali in un array. I numeri nell'array devono essere univoci (non ci devono essere ripetizioni dello stesso numero all'interno dell'array)
  * 
  */
 
@@ -181,41 +181,49 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 //------------------------------------------------------------
 
 
-/**
- * 
- * @param {number} totalCount
- * @returns {number}
- */
+// /**
+//  * 
+//  * @param {number} totalCount
+//  * @returns {number}
+//  */
 
-function addNumberUser(totalCount = 5) {
-    const number = [];
+// function addNumberUser(totalCount = 5) {
+//     const number = [];
 
-    for (let i = 0; i < totalCount; i++) {
-        const input = prompt(`[${i + 1}/${totalCount}] Inserisci un numero:`)
+//     for (let i = 0; i < totalCount; i++) {
+//         const input = prompt(`[${i + 1}/${totalCount}] Inserisci un numero:`)
 
-        if (input === null || input.trim() === "") {
-            throw new Error("Operazione annullata o input vuoto.");
-        }
+//         if (input === null || input.trim() === "") {
+//             throw new Error("Operazione annullata o input vuoto.");
+//         }
 
-        const parsedNumber = Number(input);
+//         const parsedNumber = Number(input);
 
-        if (Number.isNaN(parsedNumber)) {
-            throw new TypeError(`"${input}" non è un numero valido`);
-        }
+//         if (Number.isNaN(parsedNumber)) {
+//             throw new TypeError(`"${input}" non è un numero valido`);
+//         }
 
-        number.push(parsedNumber);
-    }
+//         number.push(parsedNumber);
+//     }
 
-    let totalSum = 0;
-    for (let i = 0; i < number.length; i++) {
-        totalSum += number[i];
-    }
+//     let totalSum = 0;
+//     for (let i = 0; i < number.length; i++) {
+//         totalSum += number[i];
+//     }
 
-    console.log("Numeri inseriti:", number);
-    console.log("Somma totale", totalSum);
-    
-    return totalSum;
-}
+//     console.log("Numeri inseriti:", number);
+//     console.log("Somma totale", totalSum);
 
-addNumberUser(5);
+//     return totalSum;
+// }
+
+// addNumberUser(5);
+
+//------------------------------------------------------------
+
+
+
+
+
+
 

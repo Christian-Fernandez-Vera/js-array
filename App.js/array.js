@@ -6,7 +6,7 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
  * 4.Dato l'array di voti [6, 8, 4, 9, 5, 7, 10], calcolare la media dei voti.
  * 5.Dato l'array ['Marco', 'Anna', 'Luca', 'Giulia', 'Tommaso'], crea un nuovo array con solo i nomi che hanno più di 4 lettere
  * 6.Chiedi all'utente 5 numeri e salvali in un array. Alla fine calcola e stampa la somma di tutti i numeri inseriti.
- * Genera 10 numeri random e salvali in un array. I numeri nell'array devono essere univoci (non ci devono essere ripetizioni dello stesso numero all'interno dell'array)
+ * ⁹7.Genera 10 numeri random e salvali in un array. I numeri nell'array devono essere univoci (non ci devono essere ripetizioni dello stesso numero all'interno dell'array)
  * 
  */
 
@@ -222,8 +222,40 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 //------------------------------------------------------------
 
 
+/**
+ * @param {number} [totale =10]
+ * @param {number} [min = 1]
+ * @param {number} [max = 100]
+ * @returns {number[]}
+ */
+
+function generareNumeriRamdom (totale = 10, min = 1, max = 100) { 
+
+    if (typeof totale !== "number" || totale <= 0)
+        return [];
+    if (totale > (max - min +1)) {
+        throw new RangeError("La quantità supera i limitidisponibili")
+}
+    const numeriUnici = [];
+
+    while (numeriUnici.length < totale) {
+        const numeroCasuale = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (!numeriUnici.includes(numeroCasuale)) {
+            numeriUnici.push(numero);
+        }
+    }
+
+    return numeriUnici;
+}
+
+const risultato generareNumeriRamdom (10, 1, 100);
+console.log (risultato);
 
 
+
+
+
+}
 
 
 

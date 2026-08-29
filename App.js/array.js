@@ -248,7 +248,7 @@ function generareNumeriRamdom (totale = 10, min = 1, max = 100) {
     return numeriUnici;
 }
 
-const risultato generareNumeriRamdom (10, 1, 100);
+const risultato = generareNumeriRamdom (10, 1, 100);
 console.log (risultato);
 
 
